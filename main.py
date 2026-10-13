@@ -1,4 +1,4 @@
-#cambio de prueba1
+#cambio de prueba
 monto_total_diario = 0.0
 caja_abierta = True  
 
@@ -7,9 +7,9 @@ while caja_abierta:
     print ("1. Registrar venta")
     print ("2. ver total acumulado")
     print ("3. cerrar caja y salir")
-    opcion = int(input("ingrese opción: "))    
+    opcion = input("ingrese opción: ")  
 
-    if (opcion == 1):
+    if (opcion == "1"):
 
         print ("===REGISTRO VENTA===")
         sub_total = 0
@@ -48,15 +48,18 @@ while caja_abierta:
         print ("Monto total diario: ", monto_total_diario)
 
 
-    elif (opcion == 2):
+    elif (opcion == "2"):
 
         print ("===VER TOTAL ACUMULADO===")
         print ("monto total diario hasta el momento es de: ", monto_total_diario)
 
-    else:
+    elif(opcion == "3"):
         print ("===CERRAR CAJA Y SALIR===")
         print ("monto total diario: ", monto_total_diario )
         print ("Gracias por usar nuestro sistema, adios")
         caja_abierta = False
         monto_total_diario = 0
         monto_total_diario = 0
+
+    else: 
+        print ("opción no valida, por favor ingrese 1, 2 o 3.")
